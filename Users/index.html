@@ -12,3 +12,16 @@
 </style>
 
 <input id="search" type="search"></input> <button id="querybutton">Search</button>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+  const urlParams = new URLSearchParams(queryString);
+  const query = urlParams.get('query')
+  console.log(query)
+  $.getJSON('https://users.roblox.com/v1/users/search?keyword=' + query + '&limit=10', function(data) {
+    // JSON result in `data` variable
+});
+</script>
