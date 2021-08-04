@@ -22,7 +22,9 @@
   const urlParams = new URLSearchParams(queryString);
   const query = urlParams.get('query')
   console.log(query)
+  
+ 
   $.getJSON('https://users.roblox.com/v1/users/search?keyword=' + query + '&limit=10', function(data) {
-    // JSON result in `data` variable
+    console.log(JSON.Stringify(data));
 });
 </script>
