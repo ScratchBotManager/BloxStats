@@ -1,3 +1,5 @@
+<html>
+  <head>
 <style>
   #search {
    left: 50px;
@@ -10,14 +12,7 @@
    top: 50px;
   }
 </style>
-
-<input id="search" type="search"></input> <button onclick="window.location.href = 'Users?query='+ document.getElementById("search").value''" id="querybutton">Search</button>
-
-
-
-
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js">
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const query = urlParams.get('query')
@@ -29,3 +24,8 @@
       }
 });
 </script>
+  </head>
+<body>
+<input id="search" type="search"></input> <button onclick="window.location.href = 'Users?query='+ document.getElementById("search").value''" id="querybutton">Search</button>
+
+  </body>
