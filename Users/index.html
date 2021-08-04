@@ -11,13 +11,14 @@
   }
 </style>
 
-<input id="search" type="search"></input> <button id="querybutton">Search</button>
+<input id="search" type="search"></input> <button onclick="window.location.href = 'Users?query='+ document.getElementById("search").innerHTML +''" id="querybutton">Search</button>
 
 
 
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+  const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const query = urlParams.get('query')
   console.log(query)
