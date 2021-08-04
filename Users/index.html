@@ -22,9 +22,10 @@
   const urlParams = new URLSearchParams(queryString);
   const query = urlParams.get('query')
   console.log(query)
-  
  
-  $.getJSON('https://users.roblox.com/v1/users/search?keyword=' + query + '&limit=10', function(data) {
-    console.log(JSON.stringify(data));
+  $.ajax('https://users.roblox.com/v1/users/search?keyword=' + query + '&limit=10', {
+        success: function(data) {
+        console.log(JSON.stringify(data));
+      }
 });
 </script>
